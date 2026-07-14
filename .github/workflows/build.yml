@@ -1,0 +1,21 @@
+name: Build
+
+on:
+  push:
+    branches: ["main"]
+  pull_request:
+
+jobs:
+  mac:
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build app
+        run: ./build.sh
+      - name: Package app
+        run: ./package.sh
+      - name: Upload packaged app
+        uses: actions/upload-artifact@v4
+        with:
+          name: ShoulderWatch-mac-arm64
+          path: dist/ShoulderWatch-0.1.0-mac-arm64.zip

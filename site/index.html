@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Shoulder Watchは、カフェや外出先で横から画面を見られていないかをMac上で静かに知らせるメニューバーアプリです。">
+    <title>Shoulder Watch - のぞき見に気づけるMacアプリ</title>
+    <link rel="icon" href="assets/app-icon.png">
+    <link rel="apple-touch-icon" href="assets/app-icon.png">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="Shoulder Watch">
+        <img src="assets/app-icon.png" alt="">
+        <span>Shoulder Watch</span>
+      </a>
+      <nav class="nav" aria-label="メイン">
+        <a href="#features">特徴</a>
+        <a href="#privacy">プライバシー</a>
+        <a class="nav-download" href="../dist/ShoulderWatch-0.1.0-mac-arm64.zip" download>Download</a>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <p class="eyebrow">Mac menu bar privacy alert</p>
+          <h1 id="hero-title">Shoulder Watch</h1>
+          <p class="hero-lead">
+            カフェや出張先で、横から画面を見られているかもしれない。
+            そんな一瞬にだけ、画面端の赤いサインで知らせます。
+          </p>
+          <div class="hero-actions">
+            <a class="primary-button" href="../dist/ShoulderWatch-0.1.0-mac-arm64.zip" download>Download for Mac</a>
+            <a class="secondary-button" href="#privacy">仕組みを見る</a>
+          </div>
+          <p class="release-note">macOS 12以降 / Apple Silicon向けテスト版</p>
+        </div>
+      </section>
+
+      <section class="status-band" aria-label="概要">
+        <div class="status-item">
+          <span class="status-value">Menu bar</span>
+          <span class="status-label">Dockに出さず常駐</span>
+        </div>
+        <div class="status-item">
+          <span class="status-value">Local only</span>
+          <span class="status-label">映像保存なし</span>
+        </div>
+        <div class="status-item">
+          <span class="status-value">Edge alert</span>
+          <span class="status-label">必要な時だけ表示</span>
+        </div>
+      </section>
+
+      <section class="section" id="features">
+        <div class="section-heading">
+          <p class="eyebrow">Quiet by default</p>
+          <h2>普段は静かに、気づくべき時だけ。</h2>
+        </div>
+        <div class="feature-grid">
+          <article class="feature-card">
+            <span class="feature-icon">01</span>
+            <h3>プレビュー非表示</h3>
+            <p>カメラ映像を画面に出さず、顔の数だけをローカルで確認します。</p>
+          </article>
+          <article class="feature-card">
+            <span class="feature-icon">02</span>
+            <h3>画面端の警告</h3>
+            <p>しきい値を超えた時だけ、作業の邪魔になりにくい赤い枠で知らせます。</p>
+          </article>
+          <article class="feature-card">
+            <span class="feature-icon">03</span>
+            <h3>すぐ調整</h3>
+            <p>メニューバーから監視の開始、警告音、検出人数をすばやく変更できます。</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="product-strip" aria-label="アプリの動き">
+        <div class="strip-copy">
+          <p class="eyebrow">Designed for public work</p>
+          <h2>席を立つほどではない違和感を、見逃さないために。</h2>
+        </div>
+        <div class="signal-row">
+          <div class="signal safe">
+            <span></span>
+            <strong>安全</strong>
+            <small>1人の顔を検出</small>
+          </div>
+          <div class="signal watch">
+            <span></span>
+            <strong>確認中</strong>
+            <small>一瞬の誤検出を除外</small>
+          </div>
+          <div class="signal alert">
+            <span></span>
+            <strong>のぞき見注意</strong>
+            <small>2人以上の顔を検出</small>
+          </div>
+        </div>
+      </section>
+
+      <section class="section privacy" id="privacy">
+        <div class="section-heading">
+          <p class="eyebrow">Privacy first</p>
+          <h2>映像を持ち出さない設計。</h2>
+        </div>
+        <div class="privacy-layout">
+          <div class="privacy-copy">
+            <p>
+              Shoulder WatchはApple Visionで顔の数を見ます。個人識別、視線推定、録画、ネットワーク送信は行いません。
+            </p>
+            <p>
+              広く配布する場合は、Developer ID署名とnotarizationを通した配布版にすると、macOSの警告を減らせます。
+            </p>
+          </div>
+          <a class="download-panel" href="../dist/ShoulderWatch-0.1.0-mac-arm64.zip" download>
+            <img src="assets/app-icon.png" alt="">
+            <span>
+              <strong>ShoulderWatch-0.1.0</strong>
+              <small>mac-arm64 ZIPをダウンロード</small>
+            </span>
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <span>Shoulder Watch</span>
+      <a href="../README.md">README</a>
+    </footer>
+  </body>
+</html>
